@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--========== Fonts and icons ==========-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
+    <!--========== Custom css ==========-->
+    <link rel="stylesheet" href="./assets/css/prj_styles.css">
+
+    <title>Portfolio website - Kabitri Chattopadhyay</title>
+</head>
+
+<body>
+
+    <!--============= HEADER ===============-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <i class="ri-leaf-line nav__logo-icon"></i> PortFolio
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="./index.html#home" class="nav__link active-link">HOME</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="./index.html#research" class="nav__link">RESEARCH</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="./index.html#skills" class="nav__link">SKILLS</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="./index.html#projects" class="nav__link">PROJECTS</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="./index.html#blog" class="nav__link">BLOG</a>
+                    </li>
+                </ul>
+
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+
+            <div class="nav__btns">
+                <!-- Theme change button -->
+                <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--=========== MAIN CONTENT ===========-->
+
+    <main class="main">
+
+        <section class="section container">
+            <div class="project__bg">
+
+              <h2 class="section__title-center project__title">
+                Projecting optimal distribution of European CSP plants for 2050
+              </h2>
+
+              <div class="project__subtitle">
+                Carl von Ossietzky University, Germany, 2014
+              </div>
+      
+              <div class="project__container">
+
+                <div class="img__thumbnail">
+                    <img src="./assets/images/spain_dni.pdf" alt="Direct Normal Irradiance map of Spain">
+                </div>
+                
+                <p class="project__description">
+                    Europe is transitioning towards a clean and sustainable future where traditional fossil 
+                    fuel sources will soon be replaced by renewable sources like solar energy. While solar 
+                    PV is the most popular technology available these days, more advanced solar technologies 
+                    like concentrated solar power (CSP) may receive more attention in future. Since CSP plants 
+                    operate by concentrating direct normal component of solar irradiance through their optical 
+                    mirrors, the power output from CSP plants are extremely sensitive to meteorological 
+                    conditions including cloud cover. In this study, we have developed a simulation model 
+                    to identify best locations of CSP plants in Europe, to design a resource-dependent capacity 
+                    distribution, and a simple parametric power model to derive CSP plant output for a ten year 
+                    period of time [2003-2012], along with an algorithm to retrieve solar irradiance data from 
+                    satellite images. The model is thoroughly validated against available data and existing 
+                    literature. The goal is to formulate technically and economically feasible CSP plant design 
+                    using resource assessment and performance monitoring to facilitate its grid integration by 
+                    the year 2050.
+                </p>
+                
+              </div>
+
+            </div>
+
+            <div class="back_btn">
+                <a href="./index.html#projects" class="button button--flex">
+                    Project overview <i class="ri-arrow-right-down-line button__icon"></i>
+                </a>
+            </div>
+        </section>
+        
+    </main>
+    <!--============= FOOTER ===============-->
+
+    <footer class="footer section">
+        <div class="footer__container container grid">
+
+            <div class="footer__content">
+                <h3 class="footer__title">Get in touch</h3>
+                <div class="footer__social">
+                    <a href="mailto: kabitri@gmail.com?subject = Feedback&body = Message" class="footer__social-link">
+                        <i class="ri-mail-send-fill"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/" class="footer__social-link">
+                      <i class="ri-linkedin-box-fill"></i>
+                    </a>
+                    <a href="https://www.github.com/" class="footer__social-link">
+                      <i class="ri-github-fill"></i>
+                    </a>
+                    <a href="https://www.facebook.com/" class="footer__social-link">
+                        <i class="ri-facebook-fill"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" class="footer__social-link">
+                        <i class="ri-instagram-line"></i>
+                    </a>
+                    <a href="https://twitter.com/" class="footer__social-link">
+                        <i class="ri-twitter-fill"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <p class="footer__copy">&#169; 2022. All rigths reserved</p>
+    </footer>
+
+
+    <!--========= SCROLL UP =========-->
+
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-fill scrollup__icon"></i>
+    </a>
+
+    <!--============ Custom javaScripts============-->
+    <script src="./assets/js/main.js"  type="text/javascript"></script>
+    <script>
+        /*=============== THEMES ===============*/ 
+        const themeButton = document.getElementById('theme-button')
+        const darkTheme = 'dark-theme'
+        const iconTheme = 'ri-sun-line'
+
+        const selectedTheme = localStorage.getItem('selected-theme')
+        const selectedIcon = localStorage.getItem('selected-icon')
+        
+        const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
+        const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'ri-moon-line' : 'ri-sun-line'
+        
+        if (selectedTheme) {
+            document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
+            themeButton.classList[selectedIcon === 'ri-moon-line' ? 'add' : 'remove'](iconTheme)
+        }
+        
+        themeButton.addEventListener('click', () => {
+            document.body.classList.toggle(darkTheme)
+            themeButton.classList.toggle(iconTheme)
+            
+            localStorage.setItem('selected-theme', getCurrentTheme())
+            localStorage.setItem('selected-icon', getCurrentIcon())
+        })
+
+    </script>
+</body>
+</html>
