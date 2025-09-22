@@ -378,10 +378,10 @@ body.dark-theme {
 .event_container {
     position: relative;
     width: 80%;
-    max-width: 10000px;
-    min-height: 1000px;
+    max-width: 1000px;
+    min-height: 100px;
     background: var(--body-color);
-    margin: 0;
+    margin: 10px;
     padding: 40px 30px;
     box-shadow: 0 35px 55px rgba(0,0,0,0.1);
 }
