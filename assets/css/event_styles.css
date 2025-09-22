@@ -377,7 +377,7 @@ body.dark-theme {
 
 .event_container {
     position: relative;
-    width: 100%;
+    width: 80%;
     max-width: 10000px;
     min-height: 1000px;
     background: var(--body-color);
