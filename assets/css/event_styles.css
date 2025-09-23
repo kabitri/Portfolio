@@ -412,7 +412,7 @@ body.dark-theme {
 }
 
 .event_container p {
-  margin-bottom: 20rem;      /* bigger gap before the table */
+  margin-bottom: 2rem;      /* bigger gap before the table */
   line-height: 0.6;         /* optional: improve readability */
 }
 
