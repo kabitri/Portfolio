@@ -376,14 +376,14 @@ body.dark-theme {
 /*--------------- CV Content --------------*/
 
 .event_container {
-    position: relative;
-    width: 80%;
-    max-width: 1000px;
-    min-height: 100px;
-    background: var(--body-color);
-    margin: 100px;
-    padding: 40px 30px;
-    box-shadow: 0 35px 55px rgba(0,0,0,0.1);
+  position: relative;
+  width: 90%;
+  max-width: 1100px;
+  background: var(--first-color-light);
+  margin: 5rem auto;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 .event_container .left_side {
@@ -398,6 +398,63 @@ body.dark-theme {
     background: var(--first-color);
     padding: 20px;
 }
+
+.event_container h3 {
+  color: var(--title1-color);
+  margin: 2rem 0 1rem;
+  font-size: var(--h2-font-size);
+  border-left: 5px solid var(--first-color);
+  padding-left: 0.5rem;
+}
+
+.event_container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+}
+
+.event_container th, 
+.event_container td {
+  border: 1px solid #ddd;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-size: var(--normal-font-size);
+}
+
+.event_container th {
+  background-color: var(--first-color);
+  color: var(--text-color-light);
+  font-weight: var(--font-semi-bold);
+}
+
+.event_container tr:nth-child(even) {
+  background-color: var(--first-color-lighten);
+}
+
+.event_container tr:hover {
+  background-color: #e6f0f5;
+  transition: background 0.3s;
+}
+
+.event_container td:first-child {
+  font-weight: var(--font-semi-bold);
+  color: var(--title2-color);
+}
+
+.event_container tbody tr td {
+  position: relative;
+}
+
+.event_container tbody tr td:first-child::before {
+  content: "●";
+  color: var(--first-color-alt);
+  position: absolute;
+  left: -1.2rem;
+  font-size: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 
 /*----------------- Footer ----------------*/
 
